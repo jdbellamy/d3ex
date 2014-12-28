@@ -1,3 +1,3 @@
 d3ex
 ====
-Dashboard charts examples
+d3 dashboard example
