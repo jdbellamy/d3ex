@@ -1,4 +1,4 @@
-d3.json('/javascripts/fixture_data.json', function(error, data) {
+d3.json('http://d3ex.herokuapp.com/javascripts/fixture_data.json', function(error, data) {
 
   var dashboard = function(id, fData) {
 
@@ -90,7 +90,7 @@ d3.json('/javascripts/fixture_data.json', function(error, data) {
 
     function pieChart(pD) {
 
-      var pC ={},    pieDim ={w:250, h: 250};
+      var pC = {}, pieDim = { w:250, h:250 };
       pieDim.r = Math.min(pieDim.w, pieDim.h) / 2;
 
       var piesvg = d3.select(id).append("svg")
@@ -130,11 +130,7 @@ d3.json('/javascripts/fixture_data.json', function(error, data) {
     }
 
     var tF = ['low','mid','high'].map(function(d) {
-      return {
-        type:d, freq: d3.sum(fData.map(function(t) {
-          return t.freq[d];
-        }))
-      };
+      return { type:d, freq:d3.sum(fData.map(function(t) { return t.freq[d]; })) };
     });
 
     var sF = fData.map(function(d){return [d.State,d.total];});
