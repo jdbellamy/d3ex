@@ -1,4 +1,4 @@
-var url = 'https://dash3d.herokuapp.com/javascripts/fixture_data.json';
+var url = '/javascripts/fixture_data.json';
 
 d3.json(url, function(error, data) {
 
