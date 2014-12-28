@@ -2,8 +2,11 @@ extends layout
 
 block content
   h1= title
+  p #{JSON.stringify(fixtureData)}
   
-  .chart
+  .hbar
     
     script(src='javascripts/main.js',charset='utf-8')
+    
+  
   
