@@ -14,8 +14,8 @@ d3.json('/javascripts/fixture_data.json', function(error, data) {
   var x = d3.scale.linear().domain([0,d3.max(data)]).range([0,1000]);
 
   var r = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([200,0])
-  , g = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([0,0])
-  , b = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([100,0]);
+      , g = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([0,0])
+      , b = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([100,0]);
 
   var c = function(x) { return d3.rgb( r(x), g(x), b(x) ); }
 
