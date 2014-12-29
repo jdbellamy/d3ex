@@ -2,16 +2,13 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 a {
   color: #00B7FF;
 }
-
 h1 {
   color: darkgray;
   font: 32px Helvetica, Arial, sans-serif;
 }
-
 .hbar div {
   font: 10px sans-serif;
   background-color: steelblue;
@@ -20,7 +17,6 @@ h1 {
   margin: 1px;
   color: white;
 }
-
 .hbar2 div {
   font: 10px sans-serif;
   text-align: right;
@@ -28,7 +24,6 @@ h1 {
   margin: 1px;
   color: black;
 }
-
 body{
   width:1060px;
   margin:50px auto;
@@ -39,14 +34,12 @@ rect:hover {  fill:blue; }
 .axis {  font: 10px sans-serif; }
 .legend tr{    border-bottom:1px solid grey; }
 .legend tr:first-child{    border-top:1px solid grey; }
-
 .axis path,
 .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
-
 .x.axis path {  display: none; }
 .legend{
   margin-bottom:76px;
@@ -61,4 +54,9 @@ rect:hover {  fill:blue; }
 .legendFreq, .legendPerc{
   align:right;
   width:50px;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
 }
