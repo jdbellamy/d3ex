@@ -64,7 +64,7 @@ d3.json('http://d3exsrv-41573.onmodulus.net/api', function(error, data) {
         .attr("text-anchor", "middle");
 
       function mouseover(d) {
-        var st = fData.filter(function(s) { return s.State == d[0];})[0],
+        var st = fData.filter(function(s) { return s.state == d[0];})[0],
         nD = d3.keys(st.freq).map(function(s) { return {type:s, freq:st.freq[s]};});
         pC.update(nD);
       }
@@ -112,12 +112,12 @@ d3.json('http://d3exsrv-41573.onmodulus.net/api', function(error, data) {
 
       function mouseover(d) {
         hG.update(fData.map(function(v) {
-          return [v.State,v.freq[d.data.type]];
+          return [v.state,v.freq[d.data.type]];
         }),segColor(d.data.type));
       }
 
       function mouseout(d) {
-        hG.update(fData.map(function(v) { return [v.State,v.total]; }), barColor);
+        hG.update(fData.map(function(v) { return [v.state,v.total]; }), barColor);
       }
 
       function arcTween(a) {
@@ -133,7 +133,7 @@ d3.json('http://d3exsrv-41573.onmodulus.net/api', function(error, data) {
       return { type:d, freq:d3.sum(fData.map(function(t) { return t.freq[d]; })) };
     });
 
-    var sF = fData.map(function(d){return [d.State,d.total];});
+    var sF = fData.map(function(d){return [d.state,d.total];});
     var hG = histoGram(sF),
         pC = pieChart(tF);
   };
