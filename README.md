@@ -5,4 +5,4 @@ d3ex
 
 Interactive dashboard examples using [D3js](http://d3js.org)
 
-- [x] Service-wired histogram and piechart [example](https://d3ex.herokuapp.com)
+- [x] Service-wired histogram and piechart [example](http://d3ex.herokuapp.com)
