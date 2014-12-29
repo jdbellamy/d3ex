@@ -1,7 +1,5 @@
 extends layout
-
 block content
-  
   h1 Service-bound Dashboard Example
   #dashboard   
   script(src='javascripts/main.js', charset='utf-8')
@@ -16,4 +14,20 @@ block content
       a(href='https://github.com/jdbellamy/d3ex') https://github.com/jdbellamy/d3ex
     p service:&nbsp;
       a(href='https://github.com/jdbellamy/d3exsvc') https://github.com/jdbellamy/d3exsvc
+  br
+  br        
+  br      
+  .hbar
+  script.  
+    var data = [29,38,47,56,64,73,82];
+    var x = d3.scale.linear().domain([0,d3.max(data)]).range([0,1000]);
+    var r = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([0,255])
+      , g = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([0,0])
+      , b = d3.scale.linear().domain([0,d3.max(data)]).rangeRound([255,0]);
+    var c = function(x) {return d3.rgb( r(x),g(x),b(x) );}
+    d3.select(".hbar").selectAll("div")
+      .data(data).enter().append("div")
+      .style("width", function(d) { return x(d) + "px"; })
+      .style("background-color", function(d) { return c(d); })
+      .text(function(d) { return d; }); 
   
