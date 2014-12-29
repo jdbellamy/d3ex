@@ -1,5 +1,6 @@
 //d3.json('http://d3ex.herokuapp.com/javascripts/fixture_data.json', function(error, data) {
 d3.json('http://d3exsrv-41573.onmodulus.net/api', function(error, data) {
+  
   var dashboard = function(id, fData) {
 
     var barColor = 'steelblue';
