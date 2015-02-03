@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/jdbellamy/d3ex.png?label=ready&title=Ready)](https://waffle.io/jdbellamy/d3ex)
 d3ex
 ====
 
